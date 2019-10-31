@@ -1,7 +1,7 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production", // mode of build - minified or develop
   entry: "./src/index.js", // main entry file
   output: {
     path: path.join(__dirname, "dist"), // the path, with require('path') we can target __dirname + our folder [this can't be a local path; "./dist/"]
@@ -21,5 +21,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ]
 };
