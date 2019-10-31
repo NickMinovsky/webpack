@@ -17,7 +17,7 @@ module.exports = {
         exclude: /node_modules/, // don't compile node_modules
         options: {
           // passing options to the loader
-          presets: ["@babel/preset-env"] // babel/preset-env transforms new to old js syntax and makes bundles smaller
+          presets: ["@babel/preset-env", "@babel/preset-react"] // babel/preset-env transforms new to old js syntax and makes bundles smaller + react preset to parse JSX to JS
         }
       }
     ]
