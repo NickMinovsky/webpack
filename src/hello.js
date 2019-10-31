@@ -1,3 +1,3 @@
-const hello = "hello world, from hello.js";
+const hello = name => `hello ${name}`;
 
 export default hello;
